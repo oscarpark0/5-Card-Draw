@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#card-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#shuffle-deck {
+  display: none;
+}
+
+.card {
+  margin: 5px;
+  padding: 5px;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Adjust this line */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.input-field {
+  width: 50px; /* Adjust as needed */
+  margin-left: 10px; /* Adjust as needed */
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+@keyframes explode {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.explosion {
+  animation: explode 2s forwards;
+}
